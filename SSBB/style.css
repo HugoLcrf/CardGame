@@ -1,0 +1,314 @@
+
+@font-face {
+    font-family:"arcade" ;
+    src: url(divers/ARCADE_R.TTF);
+}
+
+
+body{
+    cursor: url('divers/Brawl.cur'),auto;
+    width: 100vw;
+    height: 100vh;
+    background-color: #35292A;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+  }
+
+
+#SelectScreen{
+    width: 100vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 3px;
+}
+
+.BoxCharacter{
+    padding: 0;
+    height: 13vh;
+    display: flex;
+    overflow: hidden;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 10px;
+}
+
+button {
+    cursor: url('divers/Brawl.cur'),auto;
+
+  }
+
+button:hover{
+    border: 4px solid #FFA09D; /* Bordure rouge au survol */
+    transform: scale(1.1); /* Grossissement au survol */
+}
+  
+
+.BoxImg{
+    background-color: #73B5C7;
+}
+
+.BoxImg img{
+    width: 10vw;
+    height: 13vh;
+}
+
+.BoxTXT{
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    width: 100%;    
+}
+
+#ReadyButt{
+    width: 100vw;
+    height: 8vh;
+    background-color: #FFF183;
+    color: #FF5410;
+    font-size: 3rem;
+    display: none;
+    align-items: center;
+    border: #000 3px solid;
+    position: absolute;
+    }
+
+#ReadyButt p {
+    font-family: "arcade";
+    text-shadow: -3px -3px 0 #000,  
+                    3px -3px 0 #000,
+                   -3px  3px 0 #000,
+                    3px  3px 0 #000;
+                    margin: 0;
+                    padding-left: 10vw;
+}
+
+#ReadyButt img{
+    height: fit-content;     
+    padding-left: 20vw;  
+}
+
+#SelectedChamp{
+    display: flex;
+    align-items: center;
+    margin-left: 2vw;
+}
+
+
+#P1{
+    width: 20vw;
+    height: 45vh;
+    background-image: url(img/P1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#P2 {
+    width: 20vw;
+    height: 45vh;
+    background-image: url(img/P2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.BoxCharacter.selected {
+    border: 4px solid #E14B51;
+}
+
+.BoxCharacter.selected.P2 {
+    border: 4px solid #19acd1; 
+}
+
+#SelectedChamp img{
+    width: 20vw;
+    height: 30vh;
+    margin-top: 4vh;
+}
+
+#SelectedChamp p {
+    display: flex;
+    color: white;
+    font-size: 3.5em;
+    text-shadow: -3px -3px 0 #000,  
+    3px -3px 0 #000,
+   -3px  3px 0 #000,
+    3px  3px 0 #000;
+    justify-content: center;
+    margin-top: -6vh;
+}
+
+.buttStats{
+    font-family: "arcade";
+    color: rgb(8, 8, 120);
+    background-color: grey;
+    border: #000 3px solid;
+    display: flex;
+    height: 8vh;
+    align-items: center;
+}
+
+/* PAGE STATISTIQUE*/
+
+  .modify {
+    background-color: grey;
+    color: rgb(4, 4, 113);
+    padding: 6px 10px;
+    border: none;
+    border-radius: 4px;
+  }
+  
+  .delete {
+    background-color: #ff3c3c;
+    color: white;
+    padding: 6px 10px;
+    border: none;
+    border-radius: 4px;
+  }
+
+  th,td {
+    text-align: left;
+    padding: 16px;
+    font-family:"arcade" ;
+    color: white;
+  }
+
+  th{
+    color: red;
+  }
+
+  .tableau{
+    display: flex;
+    justify-content: center;
+  }
+
+  /*PAGE FIGHT*/
+
+  #bodyfight{
+    background-image: url(img/Battlefield_SSBB_stage.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#fight{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 70vh;
+}
+
+#fight img{
+    height: 40vh;
+}
+
+#player1Characters , #player2Characters{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    font-size: 2rem;
+    margin-top: 9vh;
+}
+
+
+#stats{
+display: flex;
+width: 28vw;
+justify-content: space-around;
+}
+
+.endgame{
+    display: flex;
+    justify-content: space-evenly;
+    height: 3vh;
+}
+
+.attack{
+    display: flex;
+    flex-direction: column;
+    height: 10vh;
+    justify-content: space-around;
+}
+
+#combatVis{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+    font-size: 1.8rem;
+    font-family: "arcade";
+}
+
+#combatVis p {
+    margin: 0;
+}
+
+#P1combat{
+    background-image: url(img/P1combat.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 23vw;
+    height: 27vh;
+    display: flex;
+    flex-direction: column;
+}
+
+#P2combat{
+    background-image: url(img/P2combat.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 23vw;
+    height: 27vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.imgResume{
+    height: 20vh;
+    margin-right: 1vw;
+    margin-top: 1.5vh;
+}
+
+#flexStats{
+    display: flex;
+    align-items: flex-end;
+    text-shadow: -3px -3px 0 #000,  
+    3px -3px 0 #000,
+   -3px  3px 0 #000,
+    3px  3px 0 #000;
+}
+
+#stats p {
+    margin-top: 2vh;
+}
+
+#center{
+    display: flex;
+    align-items: center;
+}
+
+/* Page Modifier un personnage et ADD PERSO */
+
+#FormPerso{
+    font-family: "arcade";
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+}
+
+#FormPerso form{
+    width: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+#FormPerso h1{
+    color: red;
+}
+
+
+
+
